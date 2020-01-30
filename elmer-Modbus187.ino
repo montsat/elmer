@@ -23,7 +23,7 @@ String popis =  verze + dat + " - 23:02";           char   ver[16];
 #include <AutoWifi.h>
           AutoWifi a; 
 
-char blynk_token[34] = "724d8845cf2b44afbf90218a4909119c";
+char blynk_token[34] = "xxxxxxxxxxxx";
 
 #include <WiFiClient.h>
           WiFiClient client;
@@ -36,7 +36,7 @@ WebServer  server1(81);
 int wifiOK;
 int httpCode;
 String url, payload, ipa, ips;
-String add_url    = "http://10.26.1.51:5000/MyWeb/php/arduino/add_elms.php";
+String add_url    = "http://xxx.xxx.xxx.xxx/add_elms.php";
 
 WidgetTerminal terminal(V_terminal);
 WidgetBridge bridge_bojler(V_bridge_bojler);
@@ -116,7 +116,7 @@ ress = 1;  start_elm=1; mod1 = 1; mod2 = 1;
 /*************** BLYNK ******************************************************************/
 BLYNK_CONNECTED() {  if (first_connect) { rtc.begin(); chcesOTA=0; Blynk.virtualWrite( V_OTA, chcesOTA ); Blynk.syncAll(); //Blynk.notify(F("ELMER connected"));                 
    s_mode_tracer = mode_tracer;  first_connect=false; }
-                     bridge_bojler.setAuthToken("EFDa9SbYR-NPgr6zODfsUYN5rMk3XjD1"); }
+                     bridge_bojler.setAuthToken("xxxxxxxxx"); }
 /*=====================================================================================================================================================================================================================================*/
 
   /**************** obslužné tlačítka ****************/
